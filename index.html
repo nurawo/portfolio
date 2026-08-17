@@ -3,24 +3,253 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ポートフォリオサイト</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Games & Apps Portfolio</title>
+  <meta name="description" content="制作したゲームやWebアプリを公開するポートフォリオサイトです。">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <header class="hero">
-    <h1>Portfolio</h1>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">Portfolio</a>
+
+      <nav class="nav">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#links">Links</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section>
-      <h2>Collection</h2>
-      <div class="collection">
-        <div class="collection-item">
-          <a href="https://pyxel-game-rpg.vercel.app/" target="_blank">サンプル</a>
-        </div>        
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Games / Apps / Experiments</p>
+
+        <h1>
+          Small Games &<br>
+          Web Apps Portfolio
+        </h1>
+
+        <p class="hero-text">
+          小さく遊べるゲームや、便利に使えるWebアプリを制作しています。
+          ここでは制作した作品、実験中のプロジェクト、今後の開発予定を公開していきます。
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="button primary">作品を見る</a>
+          <a href="#roadmap" class="button secondary">今後の予定</a>
+        </div>
       </div>
     </section>
 
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Collection</p>
+          <h2>制作した作品</h2>
+          <p>
+            現在公開中、または制作中のゲーム・アプリ一覧です。
+            作品が増えるたびにここへ追加していきます。
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card featured">
+            <div class="project-thumbnail">
+              <span>GAME</span>
+            </div>
+
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="badge">公開中</span>
+                <span>Pyxel / RPG</span>
+              </div>
+
+              <h3>Pyxel RPG Sample</h3>
+
+              <p>
+                Pyxelで制作したレトロ風RPGのサンプル作品です。
+                ドット絵風の雰囲気や、シンプルなゲーム体験を楽しめます。
+              </p>
+
+              <ul class="tech-list">
+                <li>Python</li>
+                <li>Pyxel</li>
+                <li>Vercel</li>
+              </ul>
+
+              <div class="card-actions">
+                <a href="https://pyxel-game-rpg.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  プレイする
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumbnail muted">
+              <span>APP</span>
+            </div>
+
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="badge draft">制作予定</span>
+                <span>Web App</span>
+              </div>
+
+              <h3>便利ツールアプリ</h3>
+
+              <p>
+                日常のちょっとした作業を便利にするWebアプリを制作予定です。
+                タスク管理、メモ、計算ツールなどを想定しています。
+              </p>
+
+              <ul class="tech-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+
+              <div class="card-actions disabled">
+                <span>Coming Soon</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumbnail muted">
+              <span>GAME</span>
+            </div>
+
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="badge idea">構想中</span>
+                <span>Puzzle / Mini Game</span>
+              </div>
+
+              <h3>ミニパズルゲーム</h3>
+
+              <p>
+                短時間で遊べるミニゲームを制作予定です。
+                スマホでも遊びやすい、軽量なゲームを目指します。
+              </p>
+
+              <ul class="tech-list">
+                <li>JavaScript</li>
+                <li>Canvas</li>
+                <li>Game Logic</li>
+              </ul>
+
+              <div class="card-actions disabled">
+                <span>Planning</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Skills</p>
+          <h2>使用予定の技術</h2>
+          <p>
+            ゲーム制作、Webアプリ制作、公開・運用に使う技術をまとめています。
+          </p>
+        </div>
+
+        <div class="skill-grid">
+          <div class="skill-card">
+            <h3>Frontend</h3>
+            <p>HTML / CSS / JavaScript を中心に、画面制作やUI実装を行います。</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Game</h3>
+            <p>PyxelやCanvasを使って、小さく遊べるゲームを制作します。</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Deploy</h3>
+            <p>Vercelなどを使い、制作物をWeb上に公開します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="roadmap">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Roadmap</p>
+          <h2>これからの展開</h2>
+          <p>
+            このポートフォリオサイトは、作品の追加に合わせて少しずつ育てていく予定です。
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-number">01</span>
+            <div>
+              <h3>作品カードの追加</h3>
+              <p>制作したゲームやアプリをカード形式で掲載していきます。</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-number">02</span>
+            <div>
+              <h3>スクリーンショット掲載</h3>
+              <p>各作品の画面イメージやプレイ中の様子を追加します。</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-number">03</span>
+            <div>
+              <h3>作品詳細ページの作成</h3>
+              <p>制作意図、使用技術、工夫した点を紹介する詳細ページを作ります。</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-number">04</span>
+            <div>
+              <h3>制作ログの追加</h3>
+              <p>開発中に学んだことやアップデート履歴を記録します。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="links">
+      <div class="container">
+        <div class="contact-box">
+          <p class="section-label">Links</p>
+          <h2>外部リンク</h2>
+          <p>
+            GitHub、SNS、技術記事などのリンクを今後ここに追加できます。
+          </p>
+
+          <div class="link-list">
+            <a href="#" aria-label="GitHub link">GitHub</a>
+            <a href="#" aria-label="X link">X / Twitter</a>
+            <a href="#" aria-label="Qiita link">Qiita</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; 2026 Portfolio. All rights reserved.</small>
+    </div>
+  </footer>
 </body>
 </html>
