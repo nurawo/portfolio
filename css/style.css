@@ -209,12 +209,14 @@ a {
   box-shadow: var(--shadow);
   transition:
     transform 0.2s ease,
-    border-color 0.2s ease;
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .project-card:hover {
   transform: translateY(-6px);
   border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
 }
 
 .project-card.featured {
@@ -246,6 +248,21 @@ a {
       transparent 6px,
       transparent 12px
     );
+}
+
+/* 将来的にサムネイル画像を使う場合 */
+
+.project-thumbnail.image {
+  padding: 0;
+  min-height: 180px;
+  background: #020617;
+}
+
+.project-thumbnail.image img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
 .project-thumbnail span {
@@ -289,6 +306,11 @@ a {
 .badge.idea {
   background: rgba(167, 139, 250, 0.14);
   color: #c4b5fd;
+}
+
+.badge.progress {
+  background: rgba(34, 197, 94, 0.14);
+  color: #86efac;
 }
 
 .project-content h3 {
@@ -335,6 +357,23 @@ a {
 }
 
 .card-actions.disabled span {
+  color: var(--text-muted);
+}
+
+.card-actions.multi {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.card-actions.multi a {
+  position: relative;
+}
+
+.card-actions.multi a:not(:first-child)::before {
+  content: "/";
+  margin-right: 14px;
   color: var(--text-muted);
 }
 
